@@ -1,5 +1,16 @@
 
 class Student:
+
+    def __init__(self, name, nim):
+        self.name = name
+        self.nim = nim
+    
+    def getName(self):
+        return self.name
+
+    def getNIM(self):
+        return self.nim
+    
     def name(a):
         return a
     def NIM(a):
