@@ -3,7 +3,7 @@ def askUser(query):
 
 class Student:
 
-    def __init__(self, name = "", gender = "", age = 0, nim = 0):
+    def __init__(self, name = "", gender = "", age = 0, nim=""):
         self.name = name
         self.gender = gender
         self.age = age
@@ -24,7 +24,7 @@ class Student:
             NIM : {self.nim}''')
 
 class Alumni(Student):
-    def __init__(self, name, gender, age, nim, gpa, degree):
+    def __init__(self, name="", gender="", age=0, nim="", gpa=0, degree=""):
         super().__init__(name, gender, age, nim)
         self.gpa = gpa
         self.degree = degree
