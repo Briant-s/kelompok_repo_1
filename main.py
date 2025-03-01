@@ -26,8 +26,11 @@ class Student:
             Age : {self.age}
             NIM : {self.nim}''')
 
-
-
+class Alumni(Student):
+    def __init__(self, name, gender, age, nim, gpa, degree):
+        super().__init__(name, gender, age, nim)
+        self.gpa = gpa
+        self.degree = degree
 
 def main():
     student_1 = Student()
