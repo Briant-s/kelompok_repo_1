@@ -36,24 +36,27 @@ class Alumni(Student):
     
     def getDetails(self):
         super().getDetails()
-        print(f'''
-            Graduation Year: {self.graduation_year}
-            Major: {self.major}''')
+        print(f'''            GPA: {self.gpa}
+            Degree: {self.degree}''')
 
 def main():
-    student_1 = Student()
-    print('Enter Details for Student 1')
-    student_1.askDetails()
+    # student_1 = Student()
+    # print('Enter Details for Student 1')
+    # student_1.askDetails()
 
-    student_2 = Student()
-    print('Enter Details for Student 2')
-    student_2.askDetails()
+    # student_2 = Student()
+    # print('Enter Details for Student 2')
+    # student_2.askDetails()
 
-    print('Student 1 Details : ')
-    student_1.getDetails()
-    print('Student 2 Details : ')
-    student_2.getDetails()
+    # print('Student 1 Details : ')
+    # student_1.getDetails()
+    # print('Student 2 Details : ')
+    # student_2.getDetails()
 
+    alumni_1 = Alumni()
+    print('Enter Details for Alumni 1')
+    alumni_1.askDetails()
+    alumni_1.getDetails()
 
     #student_1 = Student("Briant", "2802453471")
     #student_2 = Student("Alexander", "2802460962")
