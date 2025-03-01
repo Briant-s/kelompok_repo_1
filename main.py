@@ -1,8 +1,5 @@
-
 def askUser(query):
     return input(f'Input {query}: ')
-
-
 
 class Student:
 
@@ -31,6 +28,17 @@ class Alumni(Student):
         super().__init__(name, gender, age, nim)
         self.gpa = gpa
         self.degree = degree
+
+    def askDetails(self):
+        super().askDetails()
+        self.gpa = askUser('GPA')
+        self.degree = askUser('Degree')
+    
+    def getDetails(self):
+        super().getDetails()
+        print(f'''
+            Graduation Year: {self.graduation_year}
+            Major: {self.major}''')
 
 def main():
     student_1 = Student()
