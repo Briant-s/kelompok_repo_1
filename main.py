@@ -39,27 +39,34 @@ class Alumni(Student):
         print(f'''            GPA: {self.gpa}
             Degree: {self.degree}''')
 
+def ask_user_details(person, i):
+    print(f'Enter details for {type(person).__name__} {i}')
+    person.askDetails()
+
+def fetch_user_details(person):
+    person.getDetails()
+
 def main():
-    student_1 = Student()
-    print('Enter Details for Student 1')
-    student_1.askDetails()
 
-    student_2 = Student()
-    print('Enter Details for Student 2')
-    student_2.askDetails()
+    total_students = int(input('Enter number of students: ')) 
+    total_alumnis = int(input('Enter number of alumnis: '))
+    
+    students = [Student() for _ in range(total_students)]
+    alumnis = [Alumni() for _ in range(total_alumnis)]
 
-    print('Student 1 Details : ')
-    student_1.getDetails()
-    print('Student 2 Details : ')
-    student_2.getDetails()
+    for i, student in enumerate(students, start = 1):
+        ask_user_details(student, i)
 
-    alumni_1 = Alumni()
-    print('Enter Details for Alumni 1')
-    alumni_1.askDetails()
-    alumni_1.getDetails()
+    for i, alumni in enumerate(alumnis, start = 1):
+        ask_user_details(alumni, i)
 
-    #student_1 = Student("Briant", "2802453471")
-    #student_2 = Student("Alexander", "2802460962")
+    for i, student in enumerate(students, start = 1):
+        print(f'Details for Student {i}: ')
+        fetch_user_details(student)
+
+    for i, alumni in enumerate(alumnis, start = 1):
+        print(f'Details for Alumni {i}: ')
+        fetch_user_details(alumni)
 
 
 if __name__ == "__main__":
